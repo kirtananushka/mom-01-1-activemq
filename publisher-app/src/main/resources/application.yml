@@ -1,0 +1,24 @@
+server:
+  port: 8071
+spring:
+  application:
+    name: publisher-app
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
+    packages:
+      trust-all: true
+  jms:
+    topic-name: "topic.st01"
+    scheduler:
+      fixed-rate: 3000
+
+logging:
+  level:
+    root: error
+    com:
+      tananushka:
+        mom:
+          publisherapp:
+            publisher: info
